@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3C2947CD1A65828800C120F9 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2947CC1A65828800C120F9 /* AVFoundation.framework */; };
 		3C2947CF1A65836E00C120F9 /* upSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3C2947CE1A65836E00C120F9 /* upSound.mp3 */; };
+		3C9C0BA01A81492800B44D8A /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9C0B9F1A81492800B44D8A /* GameOverScene.swift */; };
 		3CAC653C1A5EFF5A00E6A079 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAC653B1A5EFF5A00E6A079 /* AppDelegate.swift */; };
 		3CAC653E1A5EFF5A00E6A079 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3CAC653D1A5EFF5A00E6A079 /* GameScene.sks */; };
 		3CAC65401A5EFF5A00E6A079 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAC653F1A5EFF5A00E6A079 /* GameScene.swift */; };
@@ -32,6 +33,7 @@
 /* Begin PBXFileReference section */
 		3C2947CC1A65828800C120F9 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		3C2947CE1A65836E00C120F9 /* upSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = upSound.mp3; sourceTree = "<group>"; };
+		3C9C0B9F1A81492800B44D8A /* GameOverScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
 		3CAC65361A5EFF5A00E6A079 /* Faby Bird.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Faby Bird.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CAC653A1A5EFF5A00E6A079 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CAC653B1A5EFF5A00E6A079 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				3CAC653B1A5EFF5A00E6A079 /* AppDelegate.swift */,
 				3CAC653D1A5EFF5A00E6A079 /* GameScene.sks */,
 				3CAC653F1A5EFF5A00E6A079 /* GameScene.swift */,
+				3C9C0B9F1A81492800B44D8A /* GameOverScene.swift */,
 				3C2947CE1A65836E00C120F9 /* upSound.mp3 */,
 				3CAC65411A5EFF5B00E6A079 /* GameViewController.swift */,
 				3CAC65431A5EFF5B00E6A079 /* Main.storyboard */,
@@ -230,6 +233,7 @@
 			files = (
 				3CAC65401A5EFF5A00E6A079 /* GameScene.swift in Sources */,
 				3CAC65421A5EFF5B00E6A079 /* GameViewController.swift in Sources */,
+				3C9C0BA01A81492800B44D8A /* GameOverScene.swift in Sources */,
 				3CAC653C1A5EFF5A00E6A079 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
