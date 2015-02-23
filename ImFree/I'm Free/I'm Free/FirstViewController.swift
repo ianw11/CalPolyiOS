@@ -9,7 +9,46 @@
 import UIKit
 
 class FirstViewController: UIViewController {
-
+   
+   @IBAction func setLocation1(sender: UIButton) {
+      
+      println("I pressed a button")
+      var currentUser = PFUser.currentUser()
+      
+      currentUser.setValue("Test", forKey: "UserLocation")
+      currentUser.saveInBackgroundWithBlock {
+         (success: Bool, error: NSError!) -> Void in
+         if success {
+            println("Successfully saved user")
+         } else {
+            println("Error in saving: \(error.description)")
+         }
+      }
+   }
+   
+   @IBOutlet weak var locationLabel: UILabel!
+   
+   @IBAction func updateUser(sender: UIButton) {
+      let currentUser = PFUser.currentUser()
+      
+      locationLabel.text = currentUser.valueForKey("UserLocation") as? String
+   }
+   
+   
+   @IBAction func setLocation2(sender: UIButton) {
+      var currentUser = PFUser.currentUser()
+      
+      currentUser.setValue("Second Button", forKey: "UserLocation")
+      currentUser.saveInBackgroundWithBlock {
+         (success: Bool, error: NSError!) -> Void in
+         if success {
+            println("Successfully saved user")
+         } else {
+            println("Error in saving: \(error.description)")
+         }
+      }
+   }
+   
    override func viewDidLoad() {
       super.viewDidLoad()
       // Do any additional setup after loading the view, typically from a nib.
