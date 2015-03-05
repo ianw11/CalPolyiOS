@@ -20,6 +20,14 @@ class SecondViewController: UIViewController {
       // Dispose of any resources that can be recreated.
    }
 
+   @IBAction func logout(sender: UIBarButtonItem) {
+      PFUser.currentUser()
+      PFUser.logOut()
+      
+      PersistanceUtils.dropCredentials()
+      
+      self.performSegueWithIdentifier("logOut2", sender: self)
+   }
 
 }
 

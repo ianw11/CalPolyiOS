@@ -21,21 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       let ParseInitializer: CustomObject = CustomObject()
       ParseInitializer.someMethod()
       
-      if PFUser.currentUser() == nil {
-         PFUser.logInWithUsernameInBackground("ianw11@gmail.com", password:"password") {
-            (user: PFUser!, error: NSError!) -> Void in
-            if user != nil {
-               // Do stuff after successful login.
-               println("Successfully Logged In")
-            } else {
-               // The login failed. Check error to see why.
-               println("Login Failed.  Error: \(error)")
-            }
-         }
-      } else {
-         println("No need to login, user already is logged in")
-      }
-      
       return true
    }
 

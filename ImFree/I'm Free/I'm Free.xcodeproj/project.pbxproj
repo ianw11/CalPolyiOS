@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C3D6F061AA45A7900BEE65F /* OneShotLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3D6F051AA45A7900BEE65F /* OneShotLocationManager.swift */; };
 		3C6425C71A965AA600178152 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6425C61A965AA600178152 /* AppDelegate.swift */; };
 		3C6425C91A965AA600178152 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6425C81A965AA600178152 /* FirstViewController.swift */; };
 		3C6425CB1A965AA600178152 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6425CA1A965AA600178152 /* SecondViewController.swift */; };
@@ -28,6 +29,9 @@
 		3C6425FF1A965F4100178152 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C6425FE1A965F4100178152 /* libz.dylib */; };
 		3C6426011A965F4800178152 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C6426001A965F4800178152 /* libsqlite3.dylib */; };
 		3C6426041A9660D000178152 /* CustomObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C6426031A9660D000178152 /* CustomObject.m */; };
+		3C7FBEF51A9CF54500D95182 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7FBEF41A9CF54500D95182 /* LoginViewController.swift */; };
+		3CB37D191A9F9E0500ED05E0 /* PersistanceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB37D181A9F9E0400ED05E0 /* PersistanceUtils.swift */; };
+		3CCF3A101AA51DE10086A1D2 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF3A0F1AA51DE10086A1D2 /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3C3D6F051AA45A7900BEE65F /* OneShotLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneShotLocationManager.swift; sourceTree = "<group>"; };
 		3C6425C11A965AA600178152 /* I'm Free.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "I'm Free.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C6425C51A965AA600178152 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C6425C61A965AA600178152 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +73,9 @@
 		3C6426021A9660CD00178152 /* I'm Free-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "I'm Free-Bridging-Header.h"; sourceTree = "<group>"; };
 		3C6426031A9660D000178152 /* CustomObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomObject.m; sourceTree = "<group>"; };
 		3C6426051A96612A00178152 /* CustomObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomObject.h; sourceTree = "<group>"; };
+		3C7FBEF41A9CF54500D95182 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3CB37D181A9F9E0400ED05E0 /* PersistanceUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistanceUtils.swift; sourceTree = "<group>"; };
+		3CCF3A0F1AA51DE10086A1D2 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = ../SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,13 +144,17 @@
 			isa = PBXGroup;
 			children = (
 				3C6425C61A965AA600178152 /* AppDelegate.swift */,
+				3CB37D181A9F9E0400ED05E0 /* PersistanceUtils.swift */,
 				3C6426031A9660D000178152 /* CustomObject.m */,
 				3C6426051A96612A00178152 /* CustomObject.h */,
 				3C6425C81A965AA600178152 /* FirstViewController.swift */,
 				3C6425CA1A965AA600178152 /* SecondViewController.swift */,
 				3C6425CC1A965AA600178152 /* Main.storyboard */,
+				3C7FBEF41A9CF54500D95182 /* LoginViewController.swift */,
 				3C6425CF1A965AA600178152 /* Images.xcassets */,
 				3C6425D11A965AA600178152 /* LaunchScreen.xib */,
+				3C3D6F051AA45A7900BEE65F /* OneShotLocationManager.swift */,
+				3CCF3A0F1AA51DE10086A1D2 /* SignUpViewController.swift */,
 				3C6425C41A965AA600178152 /* Supporting Files */,
 				3C6426021A9660CD00178152 /* I'm Free-Bridging-Header.h */,
 			);
@@ -277,8 +289,12 @@
 			files = (
 				3C6425CB1A965AA600178152 /* SecondViewController.swift in Sources */,
 				3C6425C71A965AA600178152 /* AppDelegate.swift in Sources */,
+				3CCF3A101AA51DE10086A1D2 /* SignUpViewController.swift in Sources */,
 				3C6425C91A965AA600178152 /* FirstViewController.swift in Sources */,
+				3C7FBEF51A9CF54500D95182 /* LoginViewController.swift in Sources */,
+				3C3D6F061AA45A7900BEE65F /* OneShotLocationManager.swift in Sources */,
 				3C6426041A9660D000178152 /* CustomObject.m in Sources */,
+				3CB37D191A9F9E0500ED05E0 /* PersistanceUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,6 +503,7 @@
 				3C6425E41A965AA700178152 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3C6425E51A965AA700178152 /* Build configuration list for PBXNativeTarget "I'm FreeTests" */ = {
 			isa = XCConfigurationList;
@@ -495,6 +512,7 @@
 				3C6425E71A965AA700178152 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
