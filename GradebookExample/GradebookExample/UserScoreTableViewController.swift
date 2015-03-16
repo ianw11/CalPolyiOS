@@ -31,6 +31,7 @@ class UserScoreCell: UITableViewCell {
    var sort_order = 0
    
    var display_score = ""
+   var display_scores: [String] = []
    
    var userScore: JSON? {
       didSet {
@@ -39,13 +40,19 @@ class UserScoreCell: UITableViewCell {
             id = us["id"].int!
             
             
-            if us["scores"][0]["display_score"].string == nil {
-               let disp = us["scores"][0]["display_score"].float!
-               display_score = "\(disp)"
-            } else {
-               display_score = us["scores"][0]["display_score"].string!
-            }
+            for score in us["scores"].arrayValue {
+               //let score = us["scores"][currNdx]
+               
+               if score["display_score"].string == nil {
+                  let disp = score["display_score"].float!
+                  //display_score = "\(disp)"
+                  display_scores.append("\(disp)")
+               } else {
+                  let disp = score["display_score"].string!
+                  display_scores.append("\(disp)")
+               }
 
+            }
          
             let str = "\(name)"
             userScoreLabel.text = str
@@ -87,6 +94,9 @@ class UserScoreTableViewController: UITableViewController {
       if loader.loginWithUsername(username, andPassword: password) {
          
          let data = loader.loadDataFromPath("?record=userscores&term=\(term)&course=\(course)&user=\(user)", error: nil)
+         
+         let str = NSString(data: data, encoding: NSUTF8StringEncoding)
+         //println(str)
          
          userScores = JSON(data: data)
          
@@ -197,7 +207,8 @@ class UserScoreTableViewController: UITableViewController {
       target.course = self.course
       target.id = from.id
       
-      target.display_score = from.display_score
+      //target.display_score = from.display_score
+      target.display_scores = from.display_scores
       
     }
    

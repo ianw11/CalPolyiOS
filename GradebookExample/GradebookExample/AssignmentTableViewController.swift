@@ -49,7 +49,7 @@ class AssignmentTableViewController: UITableViewController {
    var course = ""
    var id = 0
    
-   var display_score = ""
+   var display_scores: [String] = []
    
    var assignmentData: JSON? {
       didSet {
@@ -178,7 +178,7 @@ class AssignmentTableViewController: UITableViewController {
 
    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
       
-      return titleArr.count
+      return display_scores.count
    }
 
 
@@ -187,16 +187,16 @@ class AssignmentTableViewController: UITableViewController {
 
       // Configure the cell...
       
-      if indexPath.row == 0 {
+      //if indexPath.row == 0 {
          cell.title = titleArr[0]
-         cell.data = display_score
+         cell.data = display_scores[indexPath.row]
          return cell
-      }
+      //}
       
-         cell.title = titleArr[indexPath.row]
-         cell.data = "\(dataArr[indexPath.row])"
+         //cell.title = titleArr[indexPath.row]
+         //cell.data = "\(dataArr[indexPath.row])"
 
-      return cell
+      //return cell
    }
 
     /*

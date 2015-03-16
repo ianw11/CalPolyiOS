@@ -107,6 +107,8 @@ class EnrollmentTableViewController: UITableViewController {
    override func viewDidLoad() {
       loadData()
       
+      println("On EnrollmentTableViewController")
+      
       super.viewDidLoad()
 
         // Uncomment the following line to preserve selection between presentations
@@ -188,7 +190,30 @@ class EnrollmentTableViewController: UITableViewController {
 
    
    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-      self.performSegueWithIdentifier("enrollmentSegue", sender: tableView.cellForRowAtIndexPath(indexPath))
+      
+      let sbStr = NSBundle.mainBundle().infoDictionary?["UIMainStoryboardFile"] as String
+      
+      if sbStr != "Main_iPad" {
+         self.performSegueWithIdentifier("enrollmentSegue", sender: tableView.cellForRowAtIndexPath(indexPath))
+      } else {
+         let parent = self.splitViewController?
+         let details = parent?.viewControllers[1] as UINavigationController
+         let target = details.viewControllers[0] as UserScoreTableViewController
+         
+         let from = tableView.cellForRowAtIndexPath(indexPath) as EnrollmentCell
+         
+         target.url = self.url
+         target.username = self.username
+         target.password = self.password
+         
+         target.term = self.term
+         target.course = self.course
+         target.user = from.username
+         
+         println("calling loadData")
+         
+         target.loadData()
+      }
    }
    
 

@@ -151,6 +151,8 @@ class SectionsTableViewController: UITableViewController {
       // Test data URL
       login()
       
+      println("In SectionsTableViewController")
+      
       super.viewDidLoad()
       
 
@@ -200,6 +202,8 @@ class SectionsTableViewController: UITableViewController {
    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
       
       let row = tableView.cellForRowAtIndexPath(indexPath)
+      
+      println("indexPath: \(indexPath.row)")
       
       self.performSegueWithIdentifier("sectionSegue", sender: row)
    }

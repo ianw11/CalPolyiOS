@@ -50,12 +50,29 @@ class SignUpViewController: UIViewController {
       newUser.password = password
       newUser.setValue(firstName, forKey: "FirstName")
       newUser.setValue(lastName, forKey: "LastName")
+      newUser.setValue([], forKey: "Friends")
       
       newUser.signUpInBackgroundWithBlock {
          (succeeded: Bool!, error: NSError!) -> Void in
          if error == nil {
             PersistanceUtils.write(email, forKey: "username")
             PersistanceUtils.write(password, forKey: "password")
+            
+            let friendRequests = PFObject(className: "FriendRequests")
+            friendRequests["OwnedBy"] = email
+            friendRequests["Requests"] = []
+            friendRequests["AcceptedRequests"] = []
+            friendRequests["DeletedFriends"] = []
+            friendRequests.saveInBackgroundWithBlock {
+               (success: Bool, error: NSError!) -> Void in
+               
+               if success {
+                  println("FriendRequests object was created")
+               } else {
+                  println("FriendRequests was unable to be created")
+               }
+            }
+            
             self.performSegueWithIdentifier("signedUpSegue", sender: self)
          } else {
             let errorString = error.userInfo?["error"] as NSString

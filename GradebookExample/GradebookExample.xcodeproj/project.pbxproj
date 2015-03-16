@@ -12,6 +12,7 @@
 		3CB65E051AA62AA600627D9F /* SectionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB65E041AA62AA600627D9F /* SectionsTableViewController.swift */; };
 		3CB65E071AA62CB400627D9F /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB65E061AA62CB400627D9F /* SwiftyJSON.swift */; };
 		3CB65E091AA63FCF00627D9F /* EnrollmentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB65E081AA63FCF00627D9F /* EnrollmentTableViewController.swift */; };
+		3CF0A6381AB11CD9002D81DC /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CF0A6361AB11CD9002D81DC /* Main_iPad.storyboard */; };
 		BA757AA41A8E64A700D4751C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA757AA31A8E64A700D4751C /* AppDelegate.swift */; };
 		BA757AA91A8E64A700D4751C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA757AA71A8E64A700D4751C /* Main.storyboard */; };
 		BA757AAB1A8E64A700D4751C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA757AAA1A8E64A700D4751C /* Images.xcassets */; };
@@ -37,6 +38,7 @@
 		3CB65E041AA62AA600627D9F /* SectionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionsTableViewController.swift; sourceTree = "<group>"; };
 		3CB65E061AA62CB400627D9F /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		3CB65E081AA63FCF00627D9F /* EnrollmentTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnrollmentTableViewController.swift; sourceTree = "<group>"; };
+		3CF0A6371AB11CD9002D81DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		BA757A9E1A8E64A700D4751C /* GradebookExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GradebookExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA757AA21A8E64A700D4751C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA757AA31A8E64A700D4751C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 			children = (
 				BA757AA31A8E64A700D4751C /* AppDelegate.swift */,
 				BA757AA71A8E64A700D4751C /* Main.storyboard */,
+				3CF0A6361AB11CD9002D81DC /* Main_iPad.storyboard */,
 				3C43F34D1AA696DB008CF04C /* AssignmentTableViewController.swift */,
 				3C2D2D451AA64D670065E447 /* UserScoreTableViewController.swift */,
 				3CB65E081AA63FCF00627D9F /* EnrollmentTableViewController.swift */,
@@ -217,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA757AA91A8E64A700D4751C /* Main.storyboard in Resources */,
+				3CF0A6381AB11CD9002D81DC /* Main_iPad.storyboard in Resources */,
 				BA757AAE1A8E64A700D4751C /* LaunchScreen.xib in Resources */,
 				BA757AAB1A8E64A700D4751C /* Images.xcassets in Resources */,
 			);
@@ -266,6 +270,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		3CF0A6361AB11CD9002D81DC /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3CF0A6371AB11CD9002D81DC /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
 		BA757AA71A8E64A700D4751C /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

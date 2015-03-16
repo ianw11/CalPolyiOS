@@ -117,11 +117,11 @@ class FirstViewController: UIViewController {
       
       var currentUser = PFUser.currentUser()
       if currentUser != nil {
-         println("Refreshing (fetching) user")
          currentUser.fetch()
       } else {
          // Show the signup or login screen
          println("ERROR: currentUser is nil!")
+         self.logout(0)
       }
       
       let oldTime = currentUser.valueForKey("TimeFree") as NSDate?
@@ -132,37 +132,9 @@ class FirstViewController: UIViewController {
          unfreeze()
       }
       
-      /*
-      var query = PFQuery(className:"FriendRequests")
-      
-      var testObject: PFObject = query.getFirstObject()
-      let KEY = "OwnedBy"
-      println("blah: \(testObject.valueForKey(KEY))")
-      
-      
-      let myObject = query.whereKey("OwnedBy", equalTo: "bm@bm.com").getFirstObject()
-      for key in myObject.allKeys() {
-         println("\(key): \(myObject[key as String])")
-      }
-      */
-      
-      /*
-      query.getObjectInBackgroundWithId("OwnedBy") {
-         (owner: PFObject!, error: NSError!) -> Void in
-         if error == nil {
-            println("And accessing the FriendRequests table is a success")
-            NSLog("%@", owner)
-         } else {
-            println("ERROR: Accessing FriendRequests failed")
-            NSLog("%@", error)
-         }
-      }
-      */
-      
-      
    }
 
-   @IBAction func logout(sender: UIBarButtonItem) {
+   @IBAction func logout(sender: AnyObject) {
       PFUser.currentUser()
       PFUser.logOut()
       
@@ -172,7 +144,6 @@ class FirstViewController: UIViewController {
    }
    
    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-      println("Preparing for segue!")
    }
    
    override func didReceiveMemoryWarning() {

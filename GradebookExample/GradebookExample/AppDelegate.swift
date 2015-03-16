@@ -16,7 +16,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        
+      
+      let sbStr = NSBundle.mainBundle().infoDictionary?["UIMainStoryboardFile"] as String
+      
+      if sbStr == "Main_iPad" {
+         let split = window?.rootViewController as UISplitViewController
+         let nav = split.viewControllers[1] as UINavigationController
+         nav.topViewController.navigationItem.leftBarButtonItem = split.displayModeButtonItem()
+      }
+      
         return true
     }
 

@@ -28,11 +28,9 @@ class LoginViewController: UIViewController {
          loginSpinner.hidden = false
          
          if savePasswordSwitch.on {
-            println("Writing to file")
             PersistanceUtils.write(username, forKey: "username")
             PersistanceUtils.write(password, forKey: "password")
          } else {
-            println("Clearing file")
             PersistanceUtils.clear("username")
             PersistanceUtils.clear("password")
          }
@@ -47,11 +45,9 @@ class LoginViewController: UIViewController {
          (user: PFUser!, error: NSError!) -> Void in
          if user != nil {
             // Do stuff after successful login.
-            println("Successfully Logged In")
             self.successfulLogin()
          } else {
             // The login failed. Check error to see why.
-            println("Login Failed.  Error: \(error)")
             let errorString = error.userInfo?["error"] as NSString
             self.failedLogin(errorString)
             PersistanceUtils.dropCredentials()
